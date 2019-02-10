@@ -1,0 +1,25 @@
+header {
+    background-color: #004085;
+}
+
+nav {
+    color: white;
+}
+
+header h1 {
+    padding-top: 100px;
+    color: white;
+}
+
+header h2 {
+    font-size: 100%;
+    color: white;
+}
+
+header button {
+    padding-top: 20px;
+}
+
+#device {
+    padding-top: 160px;
+}
