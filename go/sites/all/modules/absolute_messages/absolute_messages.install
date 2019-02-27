@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Absolute Messages module (un)installation functions.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function absolute_messages_install() {
+  // Absolute Messages needs to load after Disable Messages if present
+  db_query("UPDATE {system} SET weight = 5 WHERE type = 'module' AND name = 'absolute_messages'");
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function absolute_messages_uninstall() {
+  $query = "DELETE FROM {variable} WHERE name LIKE 'absolute_messages_%'";
+  db_query($query);
+}
+
+/**
+ * Update weight to enable compatibility with Disable Messages
+ */
+function absolute_messages_update_7000() {
+  db_query("UPDATE {system} SET weight = 5 WHERE type = 'module' AND name = 'absolute_messages'");
+}
