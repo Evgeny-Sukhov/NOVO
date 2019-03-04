@@ -250,10 +250,8 @@ $databases = array (
     'default' => 
     array (
       'database' => 'novodb',
-      'username' => 'root',
-//      'username' => 'novouser',
-//      'password' => 'K1p65a5J',
-      'password' => '',
+      'username' => 'novouser',
+      'password' => 'K1p65a5J',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
