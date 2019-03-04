@@ -3,10 +3,23 @@
     background-size: cover;
 }
 
+#pageNav {
+    background-color: rgb(31,39,122);
+    height: 100px;
+}
+
+#pageNav .navbar-brand  {
+    padding-left: 20px;
+}
+
 #cards-container h5 {
     font-family: GothamMed;
     font-size: 21px;
     color: rgb(31, 39, 122);
+}
+
+#footer #user-login-form label {
+    display: none;
 }
 
 #cards-container h5.card-title-locked {
@@ -289,19 +302,129 @@ nav .nav-link:hover, nav .nav-link:active {
     border-bottom: 3px solid #005cfb;
 }
 .content input {
-    margin: auto;
+    /*margin: auto;*/
+    border-radius: 6px;
 }
 
-.content ul {
-    list-style: none;
-    display: inline;
-}
+
+
 #main-content {
-    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
 }
+
+.view-terms-cloud .view-content > div {
+    display: inline-block;
+
+}
+
+.view-terms-cloud .view-content a {
+    font-family: GothamMed;
+    font-size: 13px;
+    color: rgb(151, 170, 172);
+    padding: 20px;
+}
+
+.view-terms-cloud .view-content a.active {
+    color: #a33bea;
+}
+
+.view-terms-cloud .view-content a:hover {
+    color: #a33bea;
+    text-decoration: none;
+}
+
+#sidebar-first ul {
+    list-style: none;
+    padding: 0px;
+
+}
+
+#sidebar-first .block-menu h2 {
+    font-size: 17px;
+    font-family: SynchBlack;
+    text-transform: uppercase;
+    color: rgb(31, 39, 122);
+    padding-bottom: 10px;
+}
+
+#sidebar-first li {
+    list-style: none;
+    font-size: 17px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#sidebar-first li  a:after {
+    content: " ";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: transparent;
+}
+
+#sidebar-first li  a:hover:after {
+    content: " ";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(31, 39, 122);
+}
+
+#sidebar-first li  a.active:after {
+    content: " ";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #a33bea;
+}
+
+#sidebar-first li  a {
+    font-family: SynchBlack;
+    text-transform: uppercase;
+    color: rgb(151, 170, 172);
+    display: block;
+    line-height: 1.6;
+    padding-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pane-products-list {
+    padding-top: 20px;
+}
+
+.pane-products-list .views-row-last {
+    padding-bottom: 20px;
+}
+
+.pane-term-name {
+    padding: 20px 0px;
+}
+
+.sidebar-first li  a:hover {
+    text-decoration: none;
+}
+
+
 
 #main-content h1 {
     padding: 60px;
+}
+
+#main-content h2 {
+    font-size: 31px;
+    font-family: SynchBlack;
+    text-transform: uppercase;
+    color: rgb(31, 39, 122);
+}
+
+#main-content h3 {
+    font-size: 17px;
+    font-family: GothamBold;
+    text-transform: uppercase;
+    color: rgb(31, 39, 122);
+    margin-bottom: 0px;
 }
 
 .region-footer-thirdcolumn li:hover:after, .region-footer-fourthcolumn li:hover:after {
@@ -309,7 +432,7 @@ nav .nav-link:hover, nav .nav-link:active {
     display: block;
     width: 100%;
     margin-top: 4px;
-    border-bottom: 3px solid rgba(137, 50, 208);
+    border-bottom: 3px solid rgb(137, 50, 208);
 }
 
 #footer li:after {
@@ -415,11 +538,19 @@ nav .nav-link:hover, nav .nav-link:active {
     line-height: 1.7;
 }
 
+
 @font-face {
     font-family: "SynchBlack";
-    src: url("../fonts/SynchBlack.ttf");
-    src: url("../fonts/SynchBlack.woff") format("woff");
+    src: url("../fonts/PFSynchPro-Bold.ttf");
+    src: url("../fonts/PFSynchPro-Bold.woff") format("woff");
 }
+
+
+/*@font-face {*/
+    /*font-family: "SynchBlack";*/
+    /*src: url("../fonts/SynchBlack.ttf");*/
+    /*src: url("../fonts/SynchBlack.woff") format("woff");*/
+/*}*/
 
 @font-face {
     font-family: "Gotham";

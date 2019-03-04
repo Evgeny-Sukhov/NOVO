@@ -166,7 +166,7 @@
           </div></div> <!-- /.section, /#sidebar-second -->
         <?php endif; ?>
 
-      </div></div> <!-- /#main, /#main-wrapper -->
+      </div> <!-- /#main, /#main-wrapper -->
 </section>
 
       <?php if ($page['triptych_first'] || $page['triptych_middle'] || $page['triptych_last']): ?>

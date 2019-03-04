@@ -85,10 +85,10 @@
  * @see html.tpl.php
  */
 ?>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark" id="pageNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+            <img src="sites/default/files/logo.png" alt="<?php print t('Home'); ?>" />
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -129,8 +129,6 @@
           </div> <!-- /#secondary-menu -->
         <?php endif; ?>
 
-      </div></div> <!-- /.section, /#header -->
-
       <?php if ($messages): ?>
         <div id="messages"><div class="section clearfix">
           <?php print $messages; ?>
@@ -143,43 +141,34 @@
         </div></div> <!-- /.section, /#featured -->
       <?php endif; ?>
 
-      <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
-
-        <?php if ($breadcrumb): ?>
+<section id="main-content" >
+  <div id="main-wrapper" class="container">
+    <div class=row>
+       <?php if (false): ?>
           <div id="breadcrumb"><?php print $breadcrumb; ?></div>
         <?php endif; ?>
 
         <?php if ($page['sidebar_first']): ?>
-          <div id="sidebar-first" class="column sidebar"><div class="section">
+          <div id="sidebar-first" class="col">
             <?php print render($page['sidebar_first']); ?>
-          </div></div> <!-- /.section, /#sidebar-first -->
+          </div>
+          <div id="content" class="col-9">
+             <h2 class="title" id="page-title">
+                <?php print $title; ?>
+             </h2>
+             <?php print render($page['content']); ?>
+          </div>
+        <?php else: ?>
+
+            <div id="content" class="col-12">
+              <?php print render($page['content']); ?>
+            </div>
         <?php endif; ?>
 
-        <div id="content" class="column"><div class="section">
-          <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-          <a id="main-content"></a>
-          <?php print render($title_prefix); ?>
-          <?php if ($title): ?>
-            <h1 class="title" id="page-title">
-              <?php print $title; ?>
-            </h1>
-          <?php endif; ?>
-          <?php print render($title_suffix); ?>
-          <?php if ($tabs): ?>
-            <div class="tabs">
-              <?php print render($tabs); ?>
-            </div>
-          <?php endif; ?>
-          <?php print render($page['help']); ?>
-          <?php if ($action_links): ?>
-            <ul class="action-links">
-              <?php print render($action_links); ?>
-            </ul>
-          <?php endif; ?>
-          <?php print render($page['content']); ?>
-          <?php print $feed_icons; ?>
 
-        </div></div> <!-- /.section, /#content -->
+      </div>
+   </div>
+</section> <!-- /.section, /#content -->
 
         <?php if ($page['sidebar_second']): ?>
           <div id="sidebar-second" class="column sidebar"><div class="section">
@@ -200,7 +189,7 @@
 <section id="footer">
 
     <?php if ($page['footer_firstcolumn'] || $page['footer_secondcolumn'] || $page['footer_thirdcolumn'] || $page['footer_fourthcolumn']): ?>
-      <div id="footer-columns" class="container-fluid">
+      <div id="footer-columns" class="container d-flex justify-content-between">
         <?php print render($page['footer_firstcolumn']); ?>
         <?php print render($page['footer_secondcolumn']); ?>
         <?php print render($page['footer_thirdcolumn']); ?>
